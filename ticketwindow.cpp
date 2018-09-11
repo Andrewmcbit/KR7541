@@ -29,10 +29,6 @@ void ticketwindow::setInformation() {
 	cin >> buffer;
 	strcat(ticketInformation, " ");
 	strcat(ticketInformation, buffer);
-	cout << "enter the place of departure: ";
-	cin >> buffer;
-	strcat(ticketInformation, " ");
-	strcat(ticketInformation, buffer);
 	cout << "enter the destination: ";
 	cin >> buffer;
 	strcat(ticketInformation, " ");

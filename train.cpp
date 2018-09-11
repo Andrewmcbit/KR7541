@@ -18,10 +18,14 @@ void train::handle() {
 			if (strcmp(ticketInformationFromFile, ticketInformation) == 0) {
 				cout << "\na train ticket has been found\n" << endl;
 				ofstream fout("files\\tickets.txt", ios_base::app);
-				fout << ticketInformationFromFile;
-				fout << "\n";
-				fout.close();
-				break;
+				if (!file.is_open())
+					cout << "output file not found" << endl;
+				else {
+					fout << ticketInformationFromFile;
+					fout << "\n";
+					fout.close();
+					break;
+				}
 			}
 		}
 		if ((file.eof() == 1) && (strcmp(ticketInformationFromFile, ticketInformation) != 0)) {
