@@ -1,2 +1,3 @@
-10 01 2002 spb msk 105
-01 10 2002 msk spb 322
+dd mm yyyy destination cost 
+10 01 2002 moscow 105
+01 10 2002 petersburg 322

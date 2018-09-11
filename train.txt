@@ -1,2 +1,3 @@
-01 01 2001 spb msk 100
-01 10 2001 msk spb 1222
+dd mm yyyy destination cost 
+01 01 2001 moscow 100
+01 10 2001 petersburg 1222
