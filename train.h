@@ -9,7 +9,7 @@ private:
 	char ticketInformationFromFile[100];
 public:
 	train();
-	virtual void handle(int i);
+	virtual void handle();
 	~train();
 };
 

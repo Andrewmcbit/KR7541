@@ -12,7 +12,7 @@ public:
 	void add(ticketwindow *n);
 	void setInformation();
 	void setNext(ticketwindow *n);
-	virtual void handle(int i);
+	virtual void handle();
 	~ticketwindow();
 };
 

@@ -47,8 +47,8 @@ void ticketwindow::setNext(ticketwindow *n) {
 	next = n;
 }
 
-void ticketwindow::handle(int i) {
-	next->handle(i);
+void ticketwindow::handle() {
+	next->handle();
 }
 
 ticketwindow::~ticketwindow() {}

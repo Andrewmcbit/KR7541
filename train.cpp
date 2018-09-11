@@ -8,8 +8,8 @@ using namespace std;
 
 train::train() {};
 
-void train::handle(int i) {
-	ifstream file("train.txt");
+void train::handle() {
+	ifstream file("files\\train.txt");
 	if (!file.is_open())
 		cout << "file not found" << endl;
 	else {
@@ -17,7 +17,7 @@ void train::handle(int i) {
 			file.getline(ticketInformationFromFile, sizeof(ticketInformationFromFile), '\n');
 			if (strcmp(ticketInformationFromFile, ticketInformation) == 0) {
 				cout << "\na train ticket has been found\n" << endl;
-				ofstream fout("tickets.txt", ios_base::app);
+				ofstream fout("files\\tickets.txt", ios_base::app);
 				fout << ticketInformationFromFile;
 				fout << "\n";
 				fout.close();
@@ -26,7 +26,7 @@ void train::handle(int i) {
 		}
 		if ((file.eof() == 1) && (strcmp(ticketInformationFromFile, ticketInformation) != 0)) {
 			cout << "\ntrain ticket wasn't found." << endl;
-			ticketwindow::handle(i);
+			ticketwindow::handle();
 		}
 	}
 	file.close();
