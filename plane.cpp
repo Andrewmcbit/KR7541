@@ -8,8 +8,8 @@ using namespace std;
 
 plane::plane() {};
 
-void plane::handle(int i) {
-	ifstream file("plane.txt");
+void plane::handle() {
+	ifstream file("files\\plane.txt");
 	if (!file.is_open())
 		cout << "file not found" << endl;
 	else {
@@ -17,7 +17,7 @@ void plane::handle(int i) {
 			file.getline(ticketInformationFromFile, sizeof(ticketInformationFromFile), '\n');
 			if (strcmp(ticketInformationFromFile, ticketInformation) == 0) {
 				cout << "plane ticket has been found\n" << endl;
-				ofstream fout("tickets.txt", ios_base::app);
+				ofstream fout("files\\tickets.txt", ios_base::app);
 				fout << ticketInformationFromFile;
 				fout << "\n";
 				fout.close();

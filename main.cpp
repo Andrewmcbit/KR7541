@@ -26,10 +26,10 @@ int main() {
 		switch (button) {
 			case 1: {
 				first.setInformation();
-				first.handle(1);
+				first.handle();
 				break;
 			}
-			case 2: {ofstream file("tickets.txt", ios_base::trunc); file.close(); break; }
+			case 2: {ofstream file("files\\tickets.txt", ios_base::trunc); file.close(); break; }
 			case 0: break;
 			}
 	}
