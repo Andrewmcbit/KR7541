@@ -30,7 +30,7 @@ int main() {
 				break;
 			}
 			case 2: {ofstream file("tickets.txt", ios_base::trunc); file.close(); break; }
-			case 0: 0;
+			case 0: break;
 			}
 	}
 	return 0;
