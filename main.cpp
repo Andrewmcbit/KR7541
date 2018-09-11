@@ -29,7 +29,16 @@ int main() {
 				first.handle();
 				break;
 			}
-			case 2: {ofstream file("files\\tickets.txt", ios_base::trunc); file.close(); break; }
+			case 2: {
+				ofstream file("files\\tickets.txt", ios_base::trunc);
+				if (!file.is_open())
+					cout << "file not found" << endl;
+				else {
+					cout << "\nthe file with the output data is cleared\n" << endl;
+					file.close(); 
+					break;
+				}
+			}
 			case 0: break;
 			}
 	}
